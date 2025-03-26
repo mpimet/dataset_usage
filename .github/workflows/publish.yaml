@@ -38,7 +38,9 @@ jobs:
           path: |
             _build/cache
             _build/execute
-          key: ${{ hashFiles('uv.lock') }}-execution-cache
+          key: execution-${{ hashFiles('uv.lock') }}-${{ github.run_id }}
+          restore-keys: |
+            execution-${{ hashFiles('uv.lock') }}
       - name: Build
         run: uv run myst build --execute --html --ci
         env:
