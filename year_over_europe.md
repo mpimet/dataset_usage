@@ -4,6 +4,10 @@ kernelspec:
   display_name: 'Python 3'
 ---
 
+# Yearly mean over Europe
+
+**Goal:** Show the yearly averaged surface temperature over Europe in 2021.
+
 ```{code-cell} python
 import numpy as np
 import xarray as xr
@@ -23,7 +27,7 @@ tend = "20220101"
 ```
 
 ```{code-cell} python
-#| label: year_over_europe_timing 
+#| label: year_over_europe_timing
 %%time
 ngc4008 = xr.open_dataset("https://s3.eu-dkrz-1.dkrz.cloud/nextgems/rechunked_ngc4008/ngc4008_P1D_9.zarr", chunks='auto', engine="zarr").pipe(egh.attach_coords)
 

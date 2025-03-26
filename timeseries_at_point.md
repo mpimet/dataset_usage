@@ -4,6 +4,11 @@ kernelspec:
   display_name: 'Python 3'
 ---
 
+# 5 year timeseries at point
+
+**Goal:** Show a 5 year long timeseries of a single location (Hamburg) based on the highest spatial and temporal resolution of the dataset.
+In this case, it's healpix zoom 9 (≈ 10km) spatial and 15 minutes temporal resolution.
+
 ```{code-cell} python
 import xarray as xr
 import healpix as hp
@@ -11,12 +16,12 @@ import healpix as hp
 
 ```{code-cell} python
 hh = [9.993333, 53.550556]
-tstart = "20200901"
-tend = "20250101"
+tstart = "20210101"
+tend = "20260101"
 ```
 
 ```{code-cell} python
-#| label: timeseries_point_timing 
+#| label: timeseries_point_timing
 %%time
 ngc4008 = xr.open_dataset("https://s3.eu-dkrz-1.dkrz.cloud/nextgems/rechunked_ngc4008/ngc4008_PT15M_9.zarr",
                           chunks={"time":19200},
@@ -29,9 +34,7 @@ ngc_tas = ngc4008.tas.sel(
                     nest=True)).load()
 ```
 
-```{code-cell} python
-print(f"number of data points: {len(ngc_tas)}")
-```
+The retrieved timeseries contains {eval}`len(ngc_tas)` data points.
 
 ```{code-cell} python
 #| label: timeseries_point_plot
