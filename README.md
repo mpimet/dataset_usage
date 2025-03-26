@@ -34,4 +34,11 @@ uv run myst start --execute
 
 ![](#year_over_europe_plot)
 ```
+
+```{card} latitude-time diagram
+:link: lat_vs_time.md
+:footer: ![](#lat_vs_time_timing)
+
+![](#lat_vs_time_plot)
+```
 ::::
