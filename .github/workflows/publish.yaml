@@ -34,7 +34,7 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build
         run: uv run myst build --execute --html --ci
-        environment:
+        env:
           BASE_URL: ${{ steps.pages.outputs.base_url }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
