@@ -28,6 +28,13 @@ uv run myst start --execute
 ![](#timeseries_point_plot)
 ```
 
+```{card} latitude-time diagram
+:link: lat_vs_time.md
+:footer: ![](#lat_vs_time_timing)
+
+![](#lat_vs_time_plot)
+```
+
 ```{card} Yearly mean over Europe
 :link: year_over_europe.md
 :footer: ![](#year_over_europe_timing)
@@ -35,10 +42,10 @@ uv run myst start --execute
 ![](#year_over_europe_plot)
 ```
 
-```{card} latitude-time diagram
-:link: lat_vs_time.md
-:footer: ![](#lat_vs_time_timing)
+```{card} year_global.md
+:link: year_global.md
+:footer: ![](#year_global_timing)
 
-![](#lat_vs_time_plot)
+![](#year_global_plot)
 ```
 ::::
