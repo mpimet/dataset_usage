@@ -48,4 +48,11 @@ uv run myst start --execute
 
 ![](#year_global_plot)
 ```
+
+```{card} Extract data based on shapefiles
+:link: extract_country.md
+:footer: ![](#extract_country_timing)
+
+![](#extract_country_plot)
+```
 ::::
