@@ -6,10 +6,13 @@ project:
   # description:
   # keywords: []
   # authors: []
-  # github:
+  github: mpimet/dataset_usage
   # To autogenerate a Table of Contents, run "myst init --write-toc"
+  settings:
+    output_matplotlib_strings: remove
 site:
   template: book-theme
-  # options:
+  options:
+      logo_text: ESM dataset usage examples
   #   favicon: favicon.ico
   #   logo: site_logo.png
